@@ -12,6 +12,7 @@ import android.view.View;
 
 import com.example.kpmgtest.async.GetImageInfo;
 import com.example.kpmgtest.async.GetOcrInfo;
+import com.example.kpmgtest.async.GetUserEachPoint;
 import com.example.kpmgtest.async.GetUserPoint;
 import com.example.kpmgtest.async.GetUserRank;
 import com.example.kpmgtest.async.UpdateImageInfo;
@@ -94,5 +95,9 @@ public class MainActivity extends AppCompatActivity {
     //사용자의 현재 랭킹 가져오기
     public void getUserRank(View view) {
         new GetUserRank().execute(CmmnUtil.USER_RANK_GET+"/test");
+    }
+
+    public void getUserEachPoint(View view) {
+        new GetUserEachPoint().execute(CmmnUtil.USER_EACH_POINT_GET+"/test");
     }
 }

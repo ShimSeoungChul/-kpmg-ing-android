@@ -42,4 +42,11 @@
         android:onClick="getUserRank"
         android:text="getUserRank" />
 
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="getUserEachPoint"
+        android:text="getUserEachPoint" />
+
 </LinearLayout>
