@@ -12,6 +12,7 @@ import android.view.View;
 
 import com.example.kpmgtest.async.GetImageInfo;
 import com.example.kpmgtest.async.GetOcrInfo;
+import com.example.kpmgtest.async.GetUserPoint;
 import com.example.kpmgtest.async.UpdateImageInfo;
 import com.example.kpmgtest.common.CmmnUtil;
 
@@ -86,6 +87,6 @@ public class MainActivity extends AppCompatActivity {
     //사용자의 현재 포인트 가져오기
     public void getUserPoint(View view) {
         //요청을 전달할 ascyntask 실행
-        new UpdateImageInfo().execute(CmmnUtil.USER_POINT_GET+"/test");
+        new GetUserPoint().execute(CmmnUtil.USER_POINT_GET+"/test");
     }
 }

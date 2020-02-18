@@ -30,7 +30,11 @@ public class GetUserPoint extends AsyncTask<Object, Integer, String> {
             Log.e(tag,"서버와의 통신에 이상이 있습니다.");
         } else {
             try {
-                int point = Integer.parseInt(data);
+
+                /*
+                 point 가 유저 포인트 데이터임!! 이거 꺼내쓰3
+                 */
+               int point = Integer.parseInt(data);
 
             } catch (Exception e) {
                 e.printStackTrace();

@@ -13,7 +13,8 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class CmmnUtil {
-    private static String URL = "http://192.168.0.59:8080";
+    //private static String URL = "http://49.247.215.15:8080";
+    private static String URL = "http://49.247.215.15:8080";
     public static  final String IMAGE_INFO_GET = URL + "/images/getImageInfo";
     public static  final String HELLO_WORLD = URL + "/helloWorld";
     public static  final String IMAGE_INFO_UPDATE = URL + "/images/updateImageInfo";
