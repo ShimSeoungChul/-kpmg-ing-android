@@ -2,6 +2,7 @@ package com.example.kpmgtest;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         //이미지 서버에 전달하기
         HashMap<String, String> requestParam = new HashMap<>();
         //drawble 이미지 bitmap으로 변경
-        Drawable drawable = getResources().getDrawable(R.drawable.oc1,null);
+        Drawable drawable = getResources().getDrawable(R.drawable.oc2,null);
         Bitmap bitmap = ((BitmapDrawable)drawable).getBitmap();
         String bitmapToString="";
 
@@ -112,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void toStt(View view) {
-
+        Intent intent = new Intent(this, SttActivity.class);
+        startActivity(intent);
     }
 }
