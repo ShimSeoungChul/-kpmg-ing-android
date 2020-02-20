@@ -100,4 +100,18 @@ public class MainActivity extends AppCompatActivity {
     public void getUserEachPoint(View view) {
         new GetUserEachPoint().execute(CmmnUtil.USER_EACH_POINT_GET+"/test");
     }
+
+    public void updateOcrInfo(View view) {
+        HashMap<String, String> requestParam = new HashMap<>();
+        requestParam.put("fileId","8e2c5e4c2729493f82e8c5bd2aa7089e653");
+        requestParam.put("ocrInfo","testtesttest");
+
+        //요청을 전달할 ascyntask 실행
+        new UpdateImageInfo().execute(CmmnUtil.IMAGE_INFO_UPDATE,requestParam);
+
+    }
+
+    public void toStt(View view) {
+
+    }
 }

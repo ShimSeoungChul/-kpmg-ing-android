@@ -49,4 +49,18 @@
         android:onClick="getUserEachPoint"
         android:text="getUserEachPoint" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="updateOcrInfo"
+        android:text="UpdateOcrInfo" />
+
+    <Button
+        android:id="@+id/toStt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="toStt"
+        android:text="toStt" />
+
 </LinearLayout>
