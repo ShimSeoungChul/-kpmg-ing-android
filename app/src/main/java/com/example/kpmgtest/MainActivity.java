@@ -10,12 +10,14 @@ import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import com.example.kpmgtest.async.GetImageInfo;
 import com.example.kpmgtest.async.GetOcrInfo;
 import com.example.kpmgtest.async.GetUserEachPoint;
 import com.example.kpmgtest.async.GetUserPoint;
 import com.example.kpmgtest.async.GetUserRank;
+import com.example.kpmgtest.async.GetUserWork;
 import com.example.kpmgtest.async.UpdateImageInfo;
 import com.example.kpmgtest.common.CmmnUtil;
 
@@ -115,5 +117,18 @@ public class MainActivity extends AppCompatActivity {
     public void toStt(View view) {
         Intent intent = new Intent(this, SttActivity.class);
         startActivity(intent);
+    }
+
+    public void azurespeechTest(View view) {
+
+    }
+
+    public void toLidar(View view) {
+        Intent intent = new Intent(this, LidarActivity.class);
+        startActivity(intent);
+    }
+
+    public void getUserWork(View view) {
+        new GetUserWork().execute(CmmnUtil.USER_WORK_GET+"/test");
     }
 }

@@ -5,20 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:weightSum="11">
 
     <Button
         android:id="@+id/getImageInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="getImageInfo"
-        android:text="getImageInfo" />
+        android:text="getImageInfo"
+        android:layout_weight="1"/>
 
     <Button
         android:id="@+id/helloWolrd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="UpdateImageInfo"
+        android:layout_weight="1"
         android:text="UpdateImageInfo" />
 
     <Button
@@ -26,6 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="getOcrInfo"
+        android:layout_weight="1"
         android:text="getOcrInfo" />
 
     <Button
@@ -33,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="getUserPoint"
+        android:layout_weight="1"
         android:text="getUserPoint" />
 
     <Button
@@ -40,6 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="getUserRank"
+        android:layout_weight="1"
         android:text="getUserRank" />
 
     <Button
@@ -54,6 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="updateOcrInfo"
+        android:layout_weight="1"
         android:text="UpdateOcrInfo" />
 
     <Button
@@ -61,6 +68,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="toStt"
+        android:layout_weight="1"
         android:text="toStt" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="azurespeechTest"
+        android:layout_weight="1"
+        android:text="azurespeechtest" />
+
+    <Button
+        android:id="@+id/toLidar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="toLidar"
+        android:layout_weight="1"
+        android:text="toLidar" />
+
+    <Button
+        android:id="@+id/getUsersWorks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="getUserWork"
+        android:layout_weight="1"
+        android:text="getUserWorks" />
 
 </LinearLayout>
