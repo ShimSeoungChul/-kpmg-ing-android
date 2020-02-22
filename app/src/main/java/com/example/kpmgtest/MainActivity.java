@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
-import android.widget.LinearLayout;
 
 import com.example.kpmgtest.async.GetImageInfo;
 import com.example.kpmgtest.async.GetOcrInfo;
@@ -18,6 +17,7 @@ import com.example.kpmgtest.async.GetUserEachPoint;
 import com.example.kpmgtest.async.GetUserPoint;
 import com.example.kpmgtest.async.GetUserRank;
 import com.example.kpmgtest.async.GetUserWork;
+import com.example.kpmgtest.async.InsertOcrInfo;
 import com.example.kpmgtest.async.UpdateImageInfo;
 import com.example.kpmgtest.common.CmmnUtil;
 
@@ -89,6 +89,17 @@ public class MainActivity extends AppCompatActivity {
         new GetOcrInfo().execute(CmmnUtil.OCR_INFO_GET,requestParam);
     }
 
+    public void insertOcrInfo(View view) {
+        HashMap<String, String> requestParam = new HashMap<>();
+        requestParam.put("fileId","getOcrInfo를 통해 받은 ocrImageNm");
+        requestParam.put("ocrInfo","전처리한데이");
+        requestParam.put("workerName","test");
+
+        //요청을 전달할 ascyntask 실행
+        new InsertOcrInfo().execute(CmmnUtil.OCR_INFO_INSERT,requestParam);
+
+    }
+
     //사용자의 현재 포인트 가져오기
     public void getUserPoint(View view) {
         //요청을 전달할 ascyntask 실행
@@ -104,29 +115,13 @@ public class MainActivity extends AppCompatActivity {
         new GetUserEachPoint().execute(CmmnUtil.USER_EACH_POINT_GET+"/test");
     }
 
-    public void updateOcrInfo(View view) {
-        HashMap<String, String> requestParam = new HashMap<>();
-        requestParam.put("fileId","8e2c5e4c2729493f82e8c5bd2aa7089e653");
-        requestParam.put("ocrInfo","testtesttest");
 
-        //요청을 전달할 ascyntask 실행
-        new UpdateImageInfo().execute(CmmnUtil.IMAGE_INFO_UPDATE,requestParam);
-
-    }
 
     public void toStt(View view) {
         Intent intent = new Intent(this, SttActivity.class);
         startActivity(intent);
     }
 
-    public void azurespeechTest(View view) {
-
-    }
-
-    public void toLidar(View view) {
-        Intent intent = new Intent(this, LidarActivity.class);
-        startActivity(intent);
-    }
 
     public void getUserWork(View view) {
         new GetUserWork().execute(CmmnUtil.USER_WORK_GET+"/test");

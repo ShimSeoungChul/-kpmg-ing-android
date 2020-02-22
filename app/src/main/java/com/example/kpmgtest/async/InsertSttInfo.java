@@ -9,15 +9,15 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 
-public class UpdateOcrInfo extends AsyncTask<Object, Integer, String> {
-    String tag = "UpdateOcrInfo";
-    public UpdateOcrInfo (){
+public class InsertSttInfo extends AsyncTask<Object, Integer, String> {
+    String tag = "InsertSttInfo";
+    public InsertSttInfo (){
     }
     @Override
     protected String doInBackground(Object... params) {
         try{
             //첫 번째 인자에 서버uri, 두 번째 인자에 이미지 정보 변수를 담아 POST 메소드를 통해 서버에 전달
-            return CmmnUtil.PUT((String) params[0], CmmnUtil.hashMapToJsonString((HashMap<String, String>)params[1]));
+            return CmmnUtil.POST((String) params[0], CmmnUtil.hashMapToJsonString((HashMap<String, String>)params[1]));
         } catch (Exception e){
             Log.e(tag,e.getMessage());
             return "ServerFail";

@@ -9,9 +9,9 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 
-public class UpdateImageInfo extends AsyncTask<Object, Integer, String> {
-    String tag = "UpdateImageInfo";
-    public UpdateImageInfo (){
+public class InsertOcrInfo extends AsyncTask<Object, Integer, String> {
+    String tag = "UpdateOcrInfo";
+    public InsertOcrInfo (){
     }
     @Override
     protected String doInBackground(Object... params) {
